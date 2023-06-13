@@ -1,11 +1,4 @@
-import { styled } from '@/stitches.config';
-
-const FooterContainer = styled('footer', {
-  backgroundColor: '#f2f2f2',
-  padding: '16px',
-  textAlign: 'center',
-  zIndex: 90000,
-});
+import { FooterContainer } from '@/components/Layout/styles';
 
 export default function Footer() {
   return (

@@ -1,41 +1,19 @@
 'use client';
 
-import { css, styled } from '@/stitches.config';
 import CustomButton from '@/components/Button/Button';
 import { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Autocomplete from '@/components/Autocomplete/Autocomplete';
-import { newsCategory } from '@/constants/common';
 import { createQuery, formatCategories } from '@/utils';
 import Button from '@/components/Button/Button';
 import CustomInput from '@/components/CustomInput/CustomInput';
-
-const Wrapper = styled('div', {
-  minWidth: 250,
-  maxWidth: 250,
-  height: '100%',
-  background: '#fff',
-  position: 'fixed',
-  zIndex: 89999,
-});
-
-const Container = styled('div', {
-  margin: '1rem',
-});
-
-const Title = styled('p', {
-  fontWeight: 'bold',
-});
-
-const RefreshContainer = styled('div', {
-  marginTop: 10,
-});
-
-const FiltersHeader = styled('div', {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-});
+import {
+  Container,
+  RefreshContainer,
+  Title,
+  Wrapper,
+  FiltersHeader,
+} from '@/components/News/Filters/styles';
 
 interface IFiltersProps {
   isMobile?: boolean;

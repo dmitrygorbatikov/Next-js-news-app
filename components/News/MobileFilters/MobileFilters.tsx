@@ -1,13 +1,6 @@
 import CustomButton from '@/components/Button/Button';
 import React, { FC } from 'react';
-import { styled } from '@/stitches.config';
-
-const Container = styled('div', {
-  display: 'none',
-  '@media (max-width: 770px)': {
-    display: 'block',
-  },
-});
+import { Container } from '@/components/News/MobileFilters/styles';
 
 interface IMobileFiltersProps {
   onClick: () => void;

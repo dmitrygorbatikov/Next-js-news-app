@@ -1,35 +1,14 @@
 'use client';
-import { styled } from '@/stitches.config';
 import { IAutocompleteOpt } from '@/types';
 import { FC, useState } from 'react';
 import Image from 'next/image';
 import { createQuery } from '@/utils';
 import { useRouter } from 'next/router';
-
-const Container = styled('li', {
-  padding: '10px',
-  cursor: 'pointer',
-  '&:hover': {
-    background: '#f0f0f0',
-  },
-});
-
-const RemoveBtn = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  width: 30,
-  height: 30,
-  background: '#ff4d4d',
-  borderRadius: 5,
-  cursor: 'pointer',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-});
-const Option = styled('div', {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-});
+import {
+  RemoveBtn,
+  Option,
+  Container,
+} from '@/components/Autocomplete/OptionItem/styles';
 
 interface IOptionItemProps {
   item: IAutocompleteOpt;
